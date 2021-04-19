@@ -11,11 +11,18 @@ public class Tween
     private float _speed;
     private float _percent;
     private bool _isFinished = false;
+    public bool Gestart = true;
 
     private Func<float, float> EaseMethod;
 
+    public Action OnTweenStartAction;
+    public Action OnTweenUpdateAction;
+    public Action OnTweenCompleteAction;
+
     public Tween(GameObject objectToMove, float speed, Func<float, float> easeMethod)
     {
+        
+
         _gameObject = objectToMove;
         _speed = speed;
 
@@ -24,18 +31,31 @@ public class Tween
 
         EaseMethod = easeMethod;
 
-        Debug.Log("Tween Started");
+        
+
+
+        //Debug.Log("Tween Started");
+
     }
 
     public void UpdateTween(float dt)
     {
         _percent += dt / _speed;
 
-        if(_percent < 1)
+        
+
+
+
+        if (_percent < 1)
         {
             float easeStep = EaseMethod(_percent);
+            
+
             PerformTween(easeStep);
-            Debug.Log(_gameObject + ": Tween Update");
+
+
+            
+            //Debug.Log(_gameObject + ": Tween Update");
         }
         else
         {
@@ -44,15 +64,25 @@ public class Tween
         }
 
     }
-
+    
     protected virtual void PerformTween(float easeStep) 
-    { 
+    {
+        if(Gestart == true)
+        {
+            if (OnTweenStartAction != null)
+                OnTweenStartAction();
+            Gestart = false;
+        }
         
+
+        if (OnTweenUpdateAction != null)
+            OnTweenUpdateAction();        
     }
 
     protected virtual void OnTweenComplete()
     {
-
+        if (OnTweenCompleteAction != null)
+            OnTweenCompleteAction();
     }
 
 
@@ -60,6 +90,7 @@ public class Tween
     {
         return _isFinished;
     }
+
 }
 /*
 IEnumerator Opdracht2(float duration)

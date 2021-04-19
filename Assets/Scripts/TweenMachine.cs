@@ -12,9 +12,11 @@ public class TweenMachine : MonoBehaviour
 
     private void Awake()
     {
+
         if (instance == null)
         {
             instance = this;
+            
         }
         else
         {
@@ -77,7 +79,9 @@ public class TweenMachine : MonoBehaviour
             {
                 _activeTweens.RemoveAt(i);
                 i -= 1;
-                Debug.Log("finished Tween!");
+
+                
+                //Debug.Log("finished Tween!");
             }
         }
     }
@@ -86,6 +90,9 @@ public class TweenMachine : MonoBehaviour
     {
         Debug.Log(type);
         TweenPosition newTween = new TweenPosition(objectToMove, targetPosition, speed, easingCombiner[type]);
+        newTween.OnTweenStartAction += PrintStart;
+        newTween.OnTweenUpdateAction += PrintUpdate;
+        newTween.OnTweenCompleteAction += PrintIets;
         _activeTweens.Add(newTween);
     }
 
@@ -93,6 +100,9 @@ public class TweenMachine : MonoBehaviour
     {
         Debug.Log(type);
         TweenRotate newTween = new TweenRotate(objectRotate, targetRotation, RotationSpeed, easingCombiner[type]);
+        newTween.OnTweenStartAction += PrintStart;
+        newTween.OnTweenUpdateAction += PrintUpdate;
+        newTween.OnTweenCompleteAction += PrintIets;
         _activeTweens.Add(newTween);
     }
 
@@ -100,7 +110,25 @@ public class TweenMachine : MonoBehaviour
     {
         Debug.Log(type);
         TweenColor newTween = new TweenColor(objectColor, targetColor, ColorSpeed, easingCombiner[type]);
+        newTween.OnTweenStartAction += PrintStart;
+        newTween.OnTweenUpdateAction += PrintUpdate;
+        newTween.OnTweenCompleteAction += PrintIets;
         _activeTweens.Add(newTween);
+    }
+
+    private void PrintStart()
+    {
+        Debug.Log("Tween is gestart");
+    }
+
+    private void PrintUpdate()
+    {
+        Debug.Log("Tween wordt geupdate");
+    }
+
+    private void PrintIets()
+    {
+        Debug.Log("Tween is klaar");
     }
 
     public static TweenMachine GetInstance()

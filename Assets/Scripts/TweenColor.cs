@@ -12,10 +12,12 @@ public class TweenColor : Tween
     {
         // hoe kan ik lerpen met eeasestep tussen _currentColor en _targetColor
         //_startColor + (_direction * easeStep);
+        base.PerformTween(easeStep);
         _gameObject.GetComponent<Renderer>().material.color = Color.Lerp(_startColor, _targetColor, easeStep);
     }
     protected override void OnTweenComplete()
     {
+        base.OnTweenComplete();
         _gameObject.GetComponent<Renderer>().material.color = _targetColor;
     }
 

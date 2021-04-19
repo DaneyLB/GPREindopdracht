@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E6BE4309-E123-771B-5E28-E69950785A81}</ProjectGuid>
+    <ProjectGuid>{FE4B63AD-7DDD-BACE-BF26-3C38F2267F08}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -64,9 +64,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Actions.cs" />
     <Compile Include="Assets\Scripts\EasingType.cs" />
     <Compile Include="Assets\Scripts\Easings.cs" />
     <Compile Include="Assets\Scripts\Tween.cs" />
+    <Compile Include="Assets\Scripts\TweenColor.cs" />
     <Compile Include="Assets\Scripts\TweenMachine.cs" />
     <Compile Include="Assets\Scripts\TweenPosition.cs" />
     <Compile Include="Assets\Scripts\TweenRotate.cs" />
@@ -600,31 +602,31 @@
       <HintPath>D:/Media College/Unity/2019.4.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Media College/Jaar2/GPR Eindopracht/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Media College/Jaar2/GPRGitEind/GPREindopdracht/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
