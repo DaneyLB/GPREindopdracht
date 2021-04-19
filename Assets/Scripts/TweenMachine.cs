@@ -96,6 +96,13 @@ public class TweenMachine : MonoBehaviour
         _activeTweens.Add(newTween);
     }
 
+    public void ColorGameObject(GameObject objectColor, Color targetColor, float ColorSpeed, EasingType type)
+    {
+        Debug.Log(type);
+        TweenColor newTween = new TweenColor(objectColor, targetColor, ColorSpeed, easingCombiner[type]);
+        _activeTweens.Add(newTween);
+    }
+
     public static TweenMachine GetInstance()
     {
         return instance;
